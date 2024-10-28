@@ -1,0 +1,30 @@
+// Scrivere un programma che, partendo da una matrice di interi M e due interi h e k, restituisce il numero di sottomatrici di M di dimensione h x h contenenti esattamente k valori uguali ad 1.
+
+#include <stdio.h>
+#define N 4
+
+
+int main(void){
+    int M[N][N]={1,2,0,1,0,3,0,2,0,3,1,2,1,1,2,4};
+    int h = 2, k = 1, i, j, l, m, count_1 = 0, count_mat = 0;
+    
+    //scorro tutte le possibili matrici
+    for (i = 0; i <= N - h; i++) {
+        for (j = 0; j <= N - h; j++) {
+            count_1 = 0; //azzero il counter degli 1 prima di contare dentro ogni matrice hxh
+            //conto
+            for (l = 0; l < h; l++) {
+                for (m = 0; m < h; m++) {
+                    if (M[i + l][j + m] == 1) {
+                        count_1++;
+                    }
+                }
+            }
+            if (count_1 == k){
+                count_mat++;
+            }
+        }
+    }
+    printf("n. sottomatrici %dx%d con %d termini '1': %d \n", h, h, k, count_mat);
+    return 0;
+}
