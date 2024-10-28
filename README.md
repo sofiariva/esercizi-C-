@@ -36,17 +36,19 @@ Scrivere un programma in C che generi una matrice NxN di elementi casuali. Il pr
 
 8
 Si consideri una struttura che rappresenta oggetti di tipo Film, caratterizzata da un anno di pubblicazione, un genere, ed un voto medio tra 0 e 10 (potrebbe non essere intero).
-typedef struct{
+```typedef struct{
       int anno;
       char genere[L];
       float voto;
 } Film;
+```
 Si consideri inoltre una struttura di tipo SalaCinema, caratterizzata da una lista di film, dal numero di film in sala e dal prezzo di un biglietto.
-typedef struct{
+```typedef struct{
       Film films[N];
       int numero_film_in_sala;
       float prezzo_biglietto;
 } SalaCinema;
+```
 Si scriva un programma in C che:
 legge il numero di film presenti nella sala cinema
 riempie l'array di film della sala cinema con tutte le informazioni necessarie
@@ -55,11 +57,12 @@ calcola il ricavo stimato della sala cinema sapendo che il numero di persone che
 9
 Si crei una struttura Persona che contiene le informazioni di base di una persona: nome, cognome, anno di nascita.
 Si consideri ora una struttura ListaInvitati che contiene una lista di nomi ed il numero massimo di persone che possono partecipare ad una festa
-typedef struct{
+```typedef struct{
       char nomi_invitati[N][L];
       int numero_invitati;
       int numero_partecipanti;
 } ListaInvitati;
+```
 Si scriva un programma in C che:
 legge il numero di invitati
 legge il nome degli invitati
